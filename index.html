@@ -24,8 +24,8 @@
                 <div class="signup">
                     <nav>
                         <ul>
-                            <li><a href="#0"><i class="ri-arrow-left-fill"></i></a></li>
-                            <li>Already a member? <a href="#0">Sign in</a></li>
+                            <li><a href="#0"><i class="ri-arrow-left-line"><!-- It was fill here but i changed it to line --></i></a></li>
+                            <li>Already a member? <a href="#0" class="t-signin">Sign in</a></li>
                         </ul>
                     </nav>
                     <div class="heading">
@@ -67,7 +67,7 @@
                     <nav>
                         <ul>
                             <li><a href="#0"><i class="ri-arrow-left-fill"></i></a></li>
-                            <li>Don't have a n account? <a href="#0">Sign up</a></li>
+                            <li>Don't have an account? <a href="#0" class="t-signup">Sign up</a></li>
                         </ul>
                     </nav>
                     <div class="heading">
@@ -101,6 +101,17 @@
             </div>
         </div>
     </div>
+    <script>
+        const signup = document.querySelector('.t-signup'),
+              signin = document.querySelector('.t-signin'),
+              addclass = document.querySelector('.site');
+        signup.addEventListener('click', function() {
+            addclass.className = 'site signup-show';
+        })
+        signin.addEventListener('click', function() {
+            addclass.className = 'site signin-show';
+        })
+    </script>
     
 </body>
 </html>
